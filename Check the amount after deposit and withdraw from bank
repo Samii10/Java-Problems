@@ -1,0 +1,37 @@
+public class BankAccount {
+    String name;
+    String ID;
+    double balance;
+
+    public void deposit(double amount){
+        balance+=amount;
+    }
+
+    public void withdraw(double amount){
+        if(balance>=amount){
+            balance-=amount;
+        }
+        else{
+            System.out.println("Insufficient fund!");
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        BankAccount bank= new BankAccount();
+
+        bank.name="Sami";
+        bank.ID= "912VVa";
+        bank.balance=20000;
+
+        System.out.println("Balance before deposit: "+bank.balance);
+
+        bank.deposit(5000);
+
+        System.out.println("Balance after deposit: "+bank.balance);
+
+        bank.withdraw(27000);
+
+        System.out.println("Balance after withdraw: "+bank.balance);
+    }
+}
