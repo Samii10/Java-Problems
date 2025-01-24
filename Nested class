@@ -1,0 +1,35 @@
+class outer{
+
+    String s;
+    int a;
+
+    public outer(String s, int a) {
+        this.s = s;
+        this.a=a;
+    }
+
+    class Inner{ // nasted class
+        int a;
+        Inner(int a){
+            this.a=a;
+        }
+        void printInner(){
+            System.out.println("Inner value is: "+a);
+            System.out.println("Inner value is: "+s); // this will detect inner class integer
+            System.out.println("Inner value is: "+outer.this.a); // this will detect outer class integer
+        }
+    }
+
+    void printOuter(){
+        Inner inner= new Inner(15);
+        inner.printInner();
+    }
+}
+class Main{
+    public static void main(String[] args){
+        outer outer= new outer("ABC", 166);
+
+        outer.Inner inObj= outer.new Inner(10);
+        inObj.printInner();
+    }
+}
