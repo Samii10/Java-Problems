@@ -1,0 +1,35 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Main {
+    public static void main(String[] args) {
+        JFrame frame= new JFrame("My Application");
+        frame.setSize(300, 150);
+
+        JPanel panelTop= new JPanel();
+        // panelTop.setBackground(Color.orange); // setting the colors to define the top panel
+
+        JPanel panelBottom= new JPanel();
+        panelBottom.setBackground(Color.yellow);  // setting the colors to define the bottom panel
+
+        JLabel label= new JLabel("Label 1");
+        JTextField tf= new JTextField(15); // 15 is the width of textbox, you can change it
+
+        panelTop.add(label);
+        panelTop.add(tf);
+
+
+        JButton b1= new JButton("Button 1");
+        JButton b2= new JButton("Button 2");
+        JButton b3= new JButton("Button 3");
+
+        panelBottom.add(b1);
+        panelBottom.add(b2);
+        panelBottom.add(b3);
+
+        frame.setLayout(new FlowLayout()); // default layout for panel is Flow layout
+        frame.add(panelTop);
+        frame.add(panelBottom);
+        frame.setVisible(true);
+    }
+}
