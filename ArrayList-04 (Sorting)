@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Arraylist {
+    public static void main(String[] args){
+
+        ArrayList<Integer> number= new ArrayList<>();
+
+        number.add(20);
+        number.add(32);
+        number.add(-34);
+        number.add(66);
+        number.add(68);
+
+        System.out.println("Before sorting: "+number);
+
+        // Collections.sort(number); // your dont add "reversed" at first, it will sort in ascending order by default
+
+        // System.out.println("After sorting : "+number); // it will sort in ascending order,For example: 0, 1, 2, 3, 4
+
+        Collections.sort(number.reversed());
+        System.out.println("After sorting in descending order: "+ number); // it will sort in ascending order,For example: 4, 3, 2, 1, 0
+
+        Collections.sort(number); // autometically sorting in ascending order
+        System.out.println("After sorting ascending order: "+number);
+    }
+}
+          
