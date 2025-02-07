@@ -1,0 +1,52 @@
+public class Main {
+    public static void main(String[] args){
+       car cr= new BMW();
+       cr.drive();
+       cr.fly();
+       cr.playMusic();
+
+       cycle cy= new updatedCycle();
+       cy.drive();
+       cy.fly();
+
+    }
+}
+
+abstract class car{  //  N.B: You can't call abstract class in the main function
+    abstract void drive();
+    abstract  void fly();
+
+    void playMusic(){
+        System.out.println("FE!N FE!N FE!N FE!N");
+    }
+}
+
+class BMW extends car{
+
+    // we must have to give the every abstract method in inherited class
+    @Override
+    void drive() {
+        System.out.println("Its 120 kmph speed!");
+    }
+
+    @Override
+    void fly() {
+        System.out.println("This car doesn't have abilities to fly");
+    }
+}
+
+ abstract class cycle extends car{
+     // as we are calling only a single abstract method, so this class have to be a abstract class
+    @Override
+    void drive() {
+        System.out.println("Cycle is running at 50 kmph");
+    }
+}
+
+// we must have to create another class for every class to class abstract methods
+class updatedCycle extends cycle{
+    @Override
+    void fly() {
+        System.out.println("A cycle can't flyyyyy");
+    }
+}
