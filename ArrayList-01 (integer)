@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args){
+        ArrayList<Integer> number= new ArrayList<>();
+
+        number.add(10);
+        number.add(20);
+        number.add(99);
+
+        number.add(0, 40); // initially added the number in 0 index, we will get 4 values
+        for( int x: number){
+            System.out.println(x);
+        }
+        System.out.println(number);
+        System.out.println("Size: "+number.size());
+    }
+}
