@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> food= new ArrayList<>();
+        food.add("Pizza");
+        food.add("burger");
+        food.add("hotdog");
+
+
+        // some operations of the arraylist
+
+        /*   food.set(0, "Sushi"); */           // index number, replace the pizza to sushi
+        /*   food.remove(2);  */         // if we want remove any item from the arraylist
+        /*   food.clear(); */                    //it will remove everything from the list
+        for(int i=0; i<food.size(); i++){
+            System.out.println(food.get(i));
+        }
+    }
+}
