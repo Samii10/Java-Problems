@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args){
+
+        ArrayList<Integer> number1= new ArrayList<>();
+        ArrayList<Integer> number2= new ArrayList<>();
+        ArrayList<Integer> number3= new ArrayList<>();
+
+        number1.add(10);
+        number1.add(23);
+        number1.add(278);
+        number1.add(56);
+
+        System.out.println("Number 1: "+number1);
+
+        number2.add(54);
+        number2.add(245);
+        number2.add(26);
+        number2.add(78);
+
+        System.out.println("Number 2: "+number2);
+
+        number3.addAll(number1); // it will add all the values of number 1 in number 3
+        System.out.println("Number 3: "+number3);
+
+        boolean result= number1.equals(number2); // comperaing if number 1 is equal 2
+
+        System.out.println("Number1 = Number2: "+result); // if they are equal then it will print "true"
+                                                          // if not equal, then it will print "False:
+
+        result= number1.equals(number3); // comperaing if number 1 is equal 3
+        System.out.println("Number1 = Number 3: "+result);
+    }
+}
