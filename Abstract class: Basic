@@ -1,0 +1,25 @@
+public class Practices {
+    public static void main(String[] args){
+        Car car= new Car();
+        car.go();
+        cycle c= new cycle();
+        c.go();
+    }
+}
+
+abstract class vehicle{
+    abstract void go(); // creating the abstract method which can use every child class
+}
+class Car extends vehicle {
+    @Override
+    void go() {
+        System.out.println("The driver is driing the car");
+    }
+}
+
+class cycle extends vehicle{
+    @Override
+    void go() {
+        System.out.println("Its going too slowww");
+    }
+}
