@@ -39,5 +39,7 @@ class dog extends Animal{
 
 }
 class cat extends Animal{
-
+public void eat() {
+        System.out.println("nom nom nom");
+    }
 }
