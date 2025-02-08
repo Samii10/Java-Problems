@@ -1,4 +1,5 @@
-import java.util.Formatter;  // import formatter
+import java.util.Formatter;                // import formatter
+import java.io.FileNotFoundException;      // import for file not found
 
 public class File2 {
   public static void main(String[] args){
