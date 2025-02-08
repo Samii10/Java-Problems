@@ -1,0 +1,18 @@
+import java.io.File;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        File dir = new File("Gian");
+        dir.mkdir(); // directory will be created
+
+        File file1 = new File("F:/File/Gian/student.txt");
+        File file2 = new File("F:/File/Gian/teacher.txt");
+            String path= dir.getAbsolutePath();
+
+        try {
+            file1.createNewFile();
+            file2.createNewFile();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
