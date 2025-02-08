@@ -1,0 +1,18 @@
+import java.util.Formatter;  // import formatter
+
+public class File2 {
+  public static void main(String[] args){
+ try{
+Formatter formatter= new Formatter("F:/File/Gian/student.txt"); //location of my file
+          formatter.format("%s %s\r\n", "101", "Sami");
+          formatter.format("%s %s\r\n", "404", "Sheikh Hasina");
+          formatter.format("%s %s\r\n", "000", "Bangoboltu");
+
+          formatter.close();
+
+      } catch (FileNotFoundException e) {
+
+      }
+
+  }
+}
